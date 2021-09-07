@@ -12,6 +12,8 @@ Build a prototype of this short order receipts tracker.
 ## Prerequisites
 
 - React
+- Components
+- State and Props
 
 ## Instructions
 
@@ -21,10 +23,14 @@ Build a prototype of this short order receipts tracker.
 1. Check out to a new branch with `git checkout -b dev`.
 1. Fulfill the listed requirements.
 
+Unless otherwise stated, assignments are due the next class day by 10 am ET. 
+
 ## Requirements
 
-Follow the walkthrough and finish all parts. If you have extra time, finish the
-bonus as well.
+Follow the steps below and finish all parts. If you have extra time, finish the
+Stretch Goal as well.
+
+Your application must compile without syntax errors and load in the browser. If there are errors you can't solve, comment them out and explain what you think is wrong. 
 
 ## Part 1: Sample Receipts
 
@@ -112,7 +118,7 @@ the receipt disappears.
 
 Obviously we don't want to have to manually update the data to show that it is paid. Make a function that updates the paid property in state to be true when the receipt is clicked.
 
-## Part 4: Searching for receipts
+## Part 4: Searching for receipts (Stretch Goal)
 
 Implement a search field that allows you to search by person. The search should
 automatically update as you type, hiding every receipt that doesn't match the
