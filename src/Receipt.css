@@ -3,8 +3,17 @@
   padding: 1em;
   margin: 1em;
   flex-basis: 30%;
+  height: 300px;
 }
 
-span {
+li {
   color: indigo;
+  list-style-type: none;
+  margin: 20px;
+}
+
+.person {
+  color:black;
+  text-align: left;
+  font-size: 25px;
 }

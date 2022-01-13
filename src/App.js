@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import Receipt from './Receipt'
+
 
 const initialState = [
   {
@@ -47,13 +49,32 @@ const initialState = [
 ];
 
 function App() {
+  const [order, setOrder] = useState(initialState)
+  // if (!order.paid)  {
+  //   return null
+  // }
   return (
-    <>
+    <body>
       <header>
         <h1 className="name">Korilla</h1>
       </header>
-      <main></main>
-    </>
+      <main className='container'>
+        {
+          order.map((person) => (
+            <Receipt key={ order.id }
+            name= { person.person }
+            main={ `Main: ${person.order.main}` }
+            protein={ `Protein: ${person.order.protein}` }
+            rice={ `Rice: ${person.order.rice}` }
+            sauce={ `Sauce: ${person.order.sauce}` }
+            drink={ `Drink: ${person.order.drink}` }
+            cost={ `Cost: ${person.order.cost}` }
+            />
+        ))
+        }
+        
+      </main>
+    </body>
   );
 }
 
