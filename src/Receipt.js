@@ -3,7 +3,7 @@ import './Receipt.css'
 
 
 function Receipt (props) {
-    const { name, main, protein, rice, sauce, drink, cost, paid } = props
+    const { id, name, main, protein, rice, sauce, drink, cost, paid } = props
 
 // const markPaid = () => {
 //     setFormState({...formState, paid: true})
@@ -20,7 +20,7 @@ function Receipt (props) {
                 <li className='sauce'>{sauce}</li>
                 <li className='drink'>{drink}</li>
                 <li className='cost'>{cost}</li>
-                {/* <button className='paid' onClick={ markPaid }>Paid</button> */}
+                <button className='paid' >Paid</button>
             </ul>
         </>
         

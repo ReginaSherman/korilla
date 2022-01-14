@@ -50,18 +50,16 @@ const initialState = [
 
 function App() {
   const [order, setOrder] = useState(initialState)
-  // if (!order.paid)  {
-  //   return null
-  // }
   return (
-    <body>
+    <>
       <header>
         <h1 className="name">Korilla</h1>
       </header>
       <main className='container'>
         {
           order.map((person) => (
-            <Receipt key={ order.id }
+            !person.paid ?
+            <Receipt key={ person.id }
             name= { person.person }
             main={ `Main: ${person.order.main}` }
             protein={ `Protein: ${person.order.protein}` }
@@ -69,12 +67,12 @@ function App() {
             sauce={ `Sauce: ${person.order.sauce}` }
             drink={ `Drink: ${person.order.drink}` }
             cost={ `Cost: ${person.order.cost}` }
-            />
+            /> : null 
         ))
         }
         
       </main>
-    </body>
+    </>
   );
 }
 
