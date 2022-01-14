@@ -1,14 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Receipt.css'
 
 
 function Receipt (props) {
-    const { id, name, main, protein, rice, sauce, drink, cost, paid } = props
+    const { id, name, main, protein, rice, sauce, drink, cost, markPaid } = props
+     
 
-// const markPaid = () => {
-//     setFormState({...formState, paid: true})
-
-// }
     
     return (
         <>
@@ -20,7 +17,7 @@ function Receipt (props) {
                 <li className='sauce'>{sauce}</li>
                 <li className='drink'>{drink}</li>
                 <li className='cost'>{cost}</li>
-                <button className='paid' >Paid</button>
+                <button className='paid' onClick={() => markPaid(id)}>Paid</button>
             </ul>
         </>
         
